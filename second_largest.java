@@ -1,4 +1,7 @@
+//Abraham Alemnew 
+
 package dsa;
+
 import java.util.Collection;
 import java.util.ArrayList;
 
@@ -16,33 +19,36 @@ public class second_largest {
 	}
 
 	public static String find_second_largest(int[] n) {
-		
-		int max=n[0];
-		// secondLargest will always be at least -1 if array is not empty and there are no
+
+		int max = n[0];
+		// secondLargest will always be at least -1 if array is not empty and there are
+		// no
 		// negative values
-		// - no negatives -- create repo 
-		
+		// - no negatives -- create repo
+
 		double secondLargest = 0.5;
-		
-		//This loop will promote the max is there is a new max and then create the second largest variable 
+
+		// This loop will promote the max is there is a new max and then create the
+		// second largest variable
 		for (int i = 1; i < n.length; i++) {
 			if (max < n[i]) {
-				
+
 				max = n[i];
 			}
 		}
 		for (int i = 0; i < n.length; i++) {
-			if (n[i] < max && n[i]>secondLargest) {
-				
+			if (n[i] < max && n[i] > secondLargest) {
+
 				secondLargest = n[i];
 			}
 		}
-		//The three cases is an empty array, all the same numbers, and a second largest value available 
+		// The three cases is an empty array, all the same numbers, and a second largest
+		// value available
 		if (secondLargest == 0.5)
 			return "No second largest number";
-		
+
 		else
-			return "" + (int)secondLargest;
+			return "" + (int) secondLargest;
 
 	}
 
