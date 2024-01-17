@@ -32,7 +32,7 @@ public class second_largest {
 		double secondLargest = Integer.MIN_VALUE;
 
 		// This loop will promote the max until it reaches the end of array
-		for (int i = 1; i < n.length; i++) {
+		for (int i = 0; i < n.length; i++) {
 			if (max < n[i]) {
 
 				max = n[i];
