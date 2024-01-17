@@ -24,7 +24,7 @@ public class second_largest {
 
 		int max = Integer.MIN_VALUE;
 
-		double secondLargest = Integer.MIN_VALUE;
+		int secondLargest = Integer.MIN_VALUE;
 
 		// This loop will promote the max until it reaches the end of array
 		for (int i = 0; i < n.length; i++) {
