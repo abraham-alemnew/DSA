@@ -1,9 +1,8 @@
 //Abraham Alemnew 
 
 package dsa;
-
 import java.util.Collection;
-import java.util.ArrayList;
+
 
 public class second_largest {
 
@@ -11,20 +10,26 @@ public class second_largest {
 		int[] test1 = { 5, 2, 8, 1, 9, 3 };
 
 		int[] test2 = { 4, 4, 4, 4, 4, 4 };
-
+		
 		int[] test3 = { 10, 5, 10, 20, 20, 15 };
+
+
+		int[] test4 = { -10, -5, -10, -20, -20, -15 };
+		
+		
 		System.out.println(find_second_largest(test1));
 		System.out.println(find_second_largest(test2));
 		System.out.println(find_second_largest(test3));
+		System.out.println(find_second_largest(test4));
 	}
 
 	public static String find_second_largest(int[] n) {
 
-		int max = n[0];
+		int max = Integer.MIN_VALUE;
 		
 		
 
-		double secondLargest = 0.5;
+		double secondLargest = Integer.MIN_VALUE;
 
 		// This loop will promote the max until it reaches the end of array
 		for (int i = 1; i < n.length; i++) {
@@ -42,7 +47,7 @@ public class second_largest {
 		}
 		// The two cases are all the same numbers or the second largest value available 
 		
-		if (secondLargest == 0.5)
+		if (secondLargest == Integer.MIN_VALUE)
 			return "No second largest number";
 
 		else
